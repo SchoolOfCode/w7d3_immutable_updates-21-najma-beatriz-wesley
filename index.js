@@ -14,9 +14,10 @@ export function addToBeginning(array, item) {
 
 // Immutably insert an item at a specific position/index within an array
 export function insertItem(array, item, index) {
-  const oldArray = [...array];
-  const newArray = oldArray.splice(index, item);
-  return newArray;
+const newArray = [...array]
+ newArray.splice(index,0, item);
+ return newArray
+;
 }
 
 // Immutably replace an item at a specific position/index within an array
